@@ -6,7 +6,6 @@ from pyrogram.errors import UserNotParticipant
 BUTTONS = {}
 BOT = {}
 TUTORIAL = "https://t.me/KicchaRequest"
-@Client.on_message(filters.text & filters.private & filters.incoming & filters.user(AUTH_USERS) if AUTH_USERS else filters.text & filters.private & filters.incoming)
 async def filter(client, message):
     if message.text.startswith("/"):
         return
